@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js'></script>
+    <script src="https://unpkg.com/docx@7.8.2/build/index.js"></script>
+    <link rel="stylesheet" href="estilos.css">    
+    <title>Extractor de Texto OCR</title>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Extractor de texto</h1>
+
+        <input type="file" id="cargarImagen" accept="image/*">
+        <label for="cargarImagen">Cargar imagen</label>
+       
+        <div id="zonaPegado" class="zona-pegado" data-placeholder="Pegar imagen aqui o arrastrar y soltar">
+            <div class="instrucciones">
+                <p>📁 Arrastra y suelta una imagen aquí</p>
+                <p>📋 O pega una imagen desde el portapapeles (Ctrl+V)</p>
+            </div>
+        </div>
+
+        <div class="botones-accion">
+            <button id="extraerTexto">Extraer texto</button>
+            <button id="exportarTexto" disabled>Exportar texto</button>
+        </div>
+
+        <pre id="resultado"></pre>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
